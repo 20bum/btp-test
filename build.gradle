@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    // lombok
+//    compileOnly("org.projectlombok:lombok")
+//    annotationProcessor("org.projectlombok:lombok")
+
+    implementation group: 'com.konghq', name: 'unirest-java', version: '3.13.10'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.3'
+
+    // seung
+    implementation("com.github.seung-dev:seung-kimchi-java:1.0.40") {
+//        exclude module: "slf4j-simple"
+    }
+
+    // wss
+    implementation group: 'org.java-websocket', name: 'Java-WebSocket', version: '1.5.3'
+    compileOnly group: 'javax.websocket', name: 'javax.websocket-api', version: '1.1'
+
+    implementation group: 'org.json', name: 'json', version: '20160810'
+}
+
+test {
+    useJUnitPlatform()
+}

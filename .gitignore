@@ -1,0 +1,57 @@
+HELP.md
+
+### Build ###
+build/
+bin/
+
+### Gradle ###
+.gradle
+#settings.gradle
+!gradle/wrapper/gradle-wrapper.jar
+gradle/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Test ###
+/src/test
+
+### MAC ###
+.DS_Store
+
+### Properties ###
+#*-ops.properties
+
+### Log ###
+/logs/
+*.log
+
+### Temp Files ###
+/var/
+gradlew
+gradlew.bat
